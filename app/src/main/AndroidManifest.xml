@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.artur.ufv_maps">
+
+    <!-- Feature used to render the map. Uses OpenGl -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <permission
+        android:name="com.artur.ufv_maps.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.artur.ufv_maps.permission.MAPS_RECEIVE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.SEARCH"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <meta-data
+                    android:name="android.app.searchable"
+                    android:resource="@xml/searchable"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="Places.SelectDestinationActivity"
+            android:label="@string/title_activity_select_destination">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+
+        <!-- Google Play -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <!-- Google maps key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBo_fxR0BJGJit_hxIHfW_RSS0OV0XLvtQ"/>
+
+        <activity
+            android:name="Places.PlaceSelected"
+            android:label="@string/title_activity_blank"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".Buses.BusRoutesActivity">
+        </activity>
+    </application>
+
+</manifest>

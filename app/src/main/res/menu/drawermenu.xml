@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/drawer_top">
+        <item
+            android:id="@+id/nav_item_places"
+            android:icon="@drawable/ic_home_modern_black_48dp"
+            android:title="Locais" />
+
+        <item
+            android:id="@+id/nav_item_buses"
+            android:icon="@drawable/ic_bus_black_48dp"
+            android:title="Ônibus" />
+
+        <item
+            android:id="@+id/nav_item_keep"
+            android:icon="@drawable/ic_google_keep"
+            android:title="Lembretes (Keep)" />
+    </group>
+
+    <group
+        android:id="@+id/drawer_bottom">
+        <item
+            android:id="@+id/nav_item_settings"
+            android:icon="@drawable/ic_settings_black_48dp"
+            android:title="Configurações" />
+        <item
+            android:id="@+id/nav_item_help"
+            android:icon="@drawable/ic_help_black_48dp"
+            android:title="Ajuda" />
+    </group>
+</menu>
